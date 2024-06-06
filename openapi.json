@@ -1,0 +1,287 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "UN Metadata API",
+    "description": "API for accessing metadata from UN",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.psdata.un.org/public"
+    }
+  ],
+  "paths": {
+    "/metadata/all": {
+      "get": {
+        "summary": "Retrieve all metadata",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Name": {
+                        "type": "string",
+                        "description": "Identifier of the metadata item"
+                      },
+                      "Dataset ID": {
+                        "type": "string",
+                        "description": "Name of the metadata item"
+                      },
+                      "Group ID": {
+                        "type": "string",
+                        "description": "Description of the metadata item"
+                      },
+                      "Group": {
+                        "type": "string",
+                        "description": "Type of the metadata item"
+                      },
+                      "Description": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Update Frequency": {
+                        "type": "string",
+                        "description": "The last update timestamp of the metadata"
+                      },
+                      "Organization": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Start Range": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Source of the metadata"
+                      },
+                      "End Range": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Source of the metadata"
+                      },
+                      "Limitations and Exceptions": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Secretariat Dataset ID": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Access Request": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Security Classification": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Personal Data": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Function Code": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Retention Schedule": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Data Location": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Data Location Link": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "SQL View Name": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Additional Notes": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Country Column Name": {
+                        "type": "string",
+                        "description": "Source of the metadata"
+                      },
+                      "Column definitions": {
+                        "type": "object",
+                        "properties": {
+                          "Column Name": {
+                            "type": "string",
+                            "description": "Column name"
+                          },
+                          "Definition": {
+                            "type": "string",
+                            "description": "Column description"
+                          },
+                          "Format": {
+                            "type": "string",
+                            "description": "Column format"
+                          },
+                          "Attributes": {
+                            "type": "string",
+                            "description": "Column attributes"
+                          }
+                        }
+                      },
+                      "Themes": {
+                        "type": "object",
+                        "properties": {
+                          "Theme": {
+                            "type": "string",
+                            "description": "Theme name"
+                          }
+                        }
+                      },
+                      "Tags": {
+                        "type": "object",
+                        "properties": {
+                          "Tag": {
+                            "type": "string",
+                            "description": "Tag name"
+                          }
+                        }
+                      },
+                      "Formats": {
+                        "type": "string",
+                        "description": "Available formats"
+                      },
+                      "Disaggregated by": {
+                        "type": "string",
+                        "description": "Name"
+                      },
+                      "Languages": {
+                        "type": "string",
+                        "description": "List of Languages"
+                      },
+                      "Regions": {
+                        "type": "string",
+                        "description": "List of Regions"
+                      },
+                      "Countries": {
+                        "type": "string",
+                        "description": "List of Countries"
+                      },
+                      "Missions": {
+                        "type": "string",
+                        "description": "List of Missions"
+                      },
+                      "Icon": {
+                        "type": "string",
+                        "description": "Icon Link"
+                      },
+                      "Data Owner": {
+                        "type": "object",
+                        "properties": {
+                          "Name": {
+                            "type": "string",
+                            "description": "Data Owners Name"
+                          },
+                          "Email": {
+                            "type": "string",
+                            "description": "Owners Email"
+                          }
+                        }
+                      },
+                      "Data Steward": {
+                        "type": "object",
+                        "properties": {
+                          "Name": {
+                            "type": "string",
+                            "description": "Data Steward Name"
+                          },
+                          "Email": {
+                            "type": "string",
+                            "description": "Data Steward Email"
+                          }
+                        }
+                      },
+                      "Technical Focal Point": {
+                        "type": "object",
+                        "properties": {
+                          "Name": {
+                            "type": "string",
+                            "description": "Technical Focal Point Name"
+                          },
+                          "Email": {
+                            "type": "string",
+                            "description": "Technical Focal Point Email"
+                          }
+                        }
+                      },
+                      "Originating Offices": {
+                        "type": "object",
+                        "properties": {
+                          "Originating Offices": {
+                            "type": "string",
+                            "description": "Technical Focal Point Name"
+                          }
+                        }
+                      },
+                      "Type": {
+                        "type": "string",
+                        "description": "Dataset Type"
+                      },
+                      "Last Update Date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Last Update"
+                      },
+                      "Relevant Website": {
+                        "type": "string",
+                        "description": "Link to relevant website"
+                      },
+                      "Visualization Link": {
+                        "type": "string",
+                        "description": "Link to Dataset visualization"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
